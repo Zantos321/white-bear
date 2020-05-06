@@ -5,6 +5,10 @@
    border: 0;
 }
 
+.btn-secondary {
+   font-weight: $font-weight-normal;
+}
+
 .text-brand {
    font-family: $font-family-brand;
 }
@@ -15,6 +19,14 @@
 
 .tab-active {
    background-color: $gray-800;
+}
+
+.label-text-centered {
+   color: $gray-400;
+   font-family: $font-family-base;
+   font-size: $font-size-base * 1.25;
+   font-weight: $font-weight-normal;
+   text-align: center;
 }
 
 .card {

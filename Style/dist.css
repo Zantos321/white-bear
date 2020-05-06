@@ -11339,6 +11339,10 @@ h3 {
   border: 0;
 }
 
+.btn-secondary {
+  font-weight: 400;
+}
+
 .text-brand {
   font-family: "Fira Sans";
 }
@@ -11349,6 +11353,14 @@ h3 {
 
 .tab-active {
   background-color: #292a30;
+}
+
+.label-text-centered {
+  color: #80818d;
+  font-family: "Fira Sans";
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 .card {
