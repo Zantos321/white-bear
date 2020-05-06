@@ -11347,6 +11347,12 @@ h3 {
   font-family: "Fira Sans";
 }
 
+.logo-text {
+  color: #fff;
+  font-family: "Fira Sans";
+  font-weight: 400;
+}
+
 .tab-separator {
   border-left: 1px #292a30 solid;
 }
@@ -11383,10 +11389,17 @@ h3 {
   border-top-right-radius: 0;
 }
 
-.text-input {
+.card-input {
   color: #fff;
   font-family: "Noto Serif", serif;
   font-size: 1.25rem;
+}
+
+.landing-background {
+  background-image: url(/images/background-landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /*# sourceMappingURL=dist.css.map */

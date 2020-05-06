@@ -13,6 +13,12 @@
    font-family: $font-family-brand;
 }
 
+.logo-text {
+   color: $white;
+   font-family: $font-family-brand;
+   font-weight: $font-weight-normal;
+}
+
 .tab-separator {
    border-left: 1px $gray-800 solid;
 }
@@ -53,4 +59,11 @@
    color: $white;
    font-family: $font-family-serif;
    font-size: $font-size-base * 1.25;
+}
+
+.landing-background {
+   background-image: url(/images/background-landing.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
 }
