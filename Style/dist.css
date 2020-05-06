@@ -11357,7 +11357,7 @@ h3 {
 
 .label-text-centered {
   color: #80818d;
-  font-family: "Fira Sans";
+  font-family: "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.25rem;
   font-weight: 400;
   text-align: center;
@@ -11381,6 +11381,12 @@ h3 {
 .card.bg-secondary {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.text-input {
+  color: #fff;
+  font-family: "Noto Serif", serif;
+  font-size: 1.25rem;
 }
 
 /*# sourceMappingURL=dist.css.map */
