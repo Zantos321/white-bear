@@ -11332,6 +11332,47 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.landing-background {
+  background-image: url(/images/background-landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.landing-card {
+  color: #000;
+  font-family: "Noto Serif", serif;
+  padding: 1rem;
+  margin-bottom: 64;
+}
+
+.signup-text {
+  color: #2f52b9;
+}
+
+.logo-text {
+  color: #fff;
+  font-family: "Fira Sans";
+  font-weight: 400;
+  font-size: 3.75rem;
+}
+
+.btn-landing {
+  font-family: "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.input-text {
+  color: #80818d;
+  font-family: "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-family: "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .btn-link {
   padding-left: 0;
   padding-right: 0;
@@ -11345,12 +11386,6 @@ h3 {
 
 .text-brand {
   font-family: "Fira Sans";
-}
-
-.logo-text {
-  color: #fff;
-  font-family: "Fira Sans";
-  font-weight: 400;
 }
 
 .tab-separator {
@@ -11393,13 +11428,6 @@ h3 {
   color: #fff;
   font-family: "Noto Serif", serif;
   font-size: 1.25rem;
-}
-
-.landing-background {
-  background-image: url(/images/background-landing.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 /*# sourceMappingURL=dist.css.map */

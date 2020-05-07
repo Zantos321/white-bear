@@ -3,80 +3,79 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="style/dist.css" />
-      <title>White Bear Review Answer</title>
+      <title>White Bear Landing Page</title>
    </head>
-   <body>
-      <div class="container">
+   <body class="landing-background">
+      <div class="container-fluid">
+         <!-- top logo with brand image -->
+         <div class="row mb-8 ml-8 pt-7">
+            <div class="d-flex mt-5">
+               <img
+                  src="images/logo-landing.png"
+                  alt="white bear constellation"
+               />
+               <h1 class="logo-text d-inline ml-5">White Bear</h1>
+            </div>
+         </div>
+
+         <!-- card -->
          <div class="row">
             <div
-               class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
+               class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-2 col-lg-3 offset-xl-2 col-xl-3"
             >
-               <img
-                  src="icons/logo-app.svg"
-                  width="32px;"
-                  alt="White Bear Logo"
-               />
-
-               <h3 class="d-inline text-brand">White Bear</h3>
-
-               <button class="btn btn-link float-right">Log out</button>
-
+               <div class="card">
+                  <div class="card-body">
+                     <div class="landing-card">
+                        <h2 class="card-title">Nice to meet you</h2>
+                        <p class="card-text">
+                           Sign up for White Bear.Free Forever.
+                        </p>
+                        <button class="btn btn-success btn-landing btn-block">
+                           Sign Up
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
                <div
-                  class="btn-group d-flex mb-5"
-                  role="navigation"
-                  aria-label="navigation"
+                  class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-1 col-lg-3 offset-xl-1 col-xl-3"
                >
-                  <button type="button" class="btn btn-secondary">
-                     Create new
-                  </button>
-                  <button
-                     type="button"
-                     class="btn btn-secondary tab-separator tab-active"
-                  >
-                     Review
-                  </button>
-                  <button type="button" class="btn btn-secondary tab-separator">
-                     All Cards
-                  </button>
-               </div>
-
-               <div class="mb-5">
-                  <div class="card bg-primary">
+                  <div class="card">
                      <div class="card-body">
-                        One morning, when Gregor Samsa woke from troubled
-                        dreams, he found himself transformed in his bed into a
-                        horrible vermin. He lay on his armour-like back, and if
-                        he lifted his head a little he could see his brown
-                        belly, slightly domed and divided by arches into stiff
-                        sections.
+                        <div class="landing-card">
+                           <h2 class="card-title">Welcome back</h2>
+                           <p class="card-text">
+                              Log in with your email address and password
+                           </p>
+                           <div class="form-group">
+                              <label class="input-text" for="email"
+                                 >Email address</label
+                              >
+                              <input
+                                 type="email"
+                                 class="form-control"
+                                 id="email"
+                                 aria-describedby="email-help"
+                              />
+                           </div>
+                           <div class="form-group">
+                              <label class="input-text" for="password"
+                                 >Password</label
+                              >
+                              <input
+                                 type="password"
+                                 class="form-control"
+                                 id="password"
+                              />
+                           </div>
+                           <a
+                              href="create-answer.html"
+                              class="btn btn-success btn-landing float-right"
+                              >Log in</a
+                           >
+                        </div>
                      </div>
                   </div>
-
-                  <div class="card bg-secondary">
-                     <div class="card-body">
-                        One morning, when Gregor Samsa woke from troubled
-                        dreams, he found himself transformed in his bed into a
-                        horrible vermin. He lay on his armour-like back, and if
-                        he lifted his head a little he could see his brown
-                        belly, slightly domed and divided by arches into stiff
-                        sections.
-                     </div>
-                  </div>
-               </div>
-
-               <button class="btn btn-link">Edit</button>
-               <div class="float-right">
-                  <button class="btn btn-outline-primary mr-4">
-                     Needs Work
-                  </button>
-                  <button class="btn btn-primary">
-                     <img
-                        src="/icons/thumbs-up.svg"
-                        width="20px"
-                        style="margin-bottom: 5px; margin-right: 8px;"
-                     />
-                     Got it
-                  </button>
                </div>
             </div>
          </div>
