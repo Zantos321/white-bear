@@ -31,10 +31,46 @@
                            Sign up for White Bear.Free Forever.
                         </p>
                         <a
-                              href="#"
-                              class="btn btn-success btn-landing btn-block"
+                              class="btn btn-success btn-landing btn-block hide-me"
+                              data-toggle="collapse"
+                              href="#signup-collapse"
+                              role="button"
+                              aria-expanded="false"
+                              aria-controls="signup-collapse"
                               >Sign up</a
                            >
+                           <div class="collapse" id="signup-collapse">
+                              <p class="signup-text"> 
+                                 Lets get you signed up.
+                              </p>
+                              <div class="form-group">
+                                 <label class="input-text" for="email"
+                                    >Email address</label
+                                 >
+                                 <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    aria-describedby="email-help"
+                                 />
+                              </div>
+                              <div class="form-group">
+                                 <label class="input-text" for="password"
+                                    >Create a password</label
+                                 >
+                                 <input
+                                    type="password"
+                                    class="form-control"
+                                    id="password"
+                                 />
+                              </div>
+                              <a
+                              class="btn btn-success btn-landing btn-block mt-5"
+                              href="create-answer.html"
+                              role="button"
+                              >Lets go!</a
+                           >
+                           </div>
                      </div>
                   </div>
                </div>
@@ -82,5 +118,8 @@
             </div>
          </div>
       </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    </body>
 </html>

@@ -15,6 +15,8 @@
 
 .signup-text {
    color: $success;
+   font-size: $font-size-base;
+   font-family: $font-family-base;
 }
 
 .logo-text {
@@ -38,6 +40,10 @@
 .card-text {
    font-size: $font-size-base;
    font-family: $font-family-base;
+}
+
+.hide-me[aria-expanded="true"] {
+   display: none;
 }
 
 // Card Pages

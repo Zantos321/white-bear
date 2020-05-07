@@ -11347,6 +11347,8 @@ h3 {
 
 .signup-text {
   color: #2f52b9;
+  font-size: 1rem;
+  font-family: "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .logo-text {
@@ -11370,6 +11372,10 @@ h3 {
 .card-text {
   font-size: 1rem;
   font-family: "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.hide-me[aria-expanded=true] {
+  display: none;
 }
 
 .btn-link {
