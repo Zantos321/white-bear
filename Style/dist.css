@@ -11342,7 +11342,7 @@ h3 {
 .landing-card {
   color: #000;
   font-family: "Noto Serif", serif;
-  padding: 1rem;
+  padding: 0;
 }
 
 .signup-text {
