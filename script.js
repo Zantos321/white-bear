@@ -5,3 +5,7 @@ $("#save-imagery").click(function () {
 $("#save-error").click(function () {
    $("#overlay-error").toggleClass("d-flex d-none");
 });
+
+$("#delete-check").click(function () {
+   $("#card-delete").toggleClass("invisible");
+});

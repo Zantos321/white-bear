@@ -27,37 +27,140 @@
                >
 
                <div
-               class="btn-group d-flex mb-5"
-               role="navigation"
-               aria-label="navigation"
-            >
-               <a
-                  href="create-answer.html"
-                  class="btn btn-secondary"
-                  role="button"
+                  class="btn-group d-flex mb-5"
+                  role="navigation"
+                  aria-label="navigation"
                >
-                  Create new
-               </a>
-               <a
-                  href="review-imagery.html"
-                  class="btn btn-secondary tab-separator"
-                  role="button"
+                  <a
+                     href="create-answer.html"
+                     class="btn btn-secondary"
+                     role="button"
+                  >
+                     Create new
+                  </a>
+                  <a
+                     href="review-imagery.html"
+                     class="btn btn-secondary tab-separator"
+                     role="button"
+                  >
+                     Review
+                  </a>
+                  <a
+                     href="#"
+                     class="btn btn-secondary tab-separator tab-active"
+                     role="button"
+                  >
+                     All Cards
+                  </a>
+               </div>
+               <div class="text-center text-muted my-4">
+                  <h4>
+                     Edit card
+                  </h4>
+               </div>
+
+               <div class="mb-2">
+                  <div class="card bg-primary">
+                     <div class="card-body">
+                        <textarea rows="11" class="d-sm-none"></textarea>
+                        <textarea rows="6" class="d-none d-sm-block"></textarea>
+                     </div>
+                  </div>
+
+                  <div class="card bg-secondary">
+                     <div class="card-body">
+                        One morning, when Gregor Samsa woke from troubled
+                        dreams, he found himself transformed in his bed into a
+                        horrible vermin. He lay on his armour-like back, and if
+                        he lifted his head a little he could see his brown
+                        belly, slightly domed and divided by arches into stiff
+                        sections.
+                     </div>
+                  </div>
+               </div>
+
+               <p class="float-right mb-5">0/240</p>
+               <div class="clearfix"></div>
+               <a href="all-cards.html" class="btn btn-link" role="button"
+                  >Discard changes</a
                >
-                  Review
-               </a>
                <a
-                  href="#"
-                  class="btn btn-secondary tab-separator tab-active"
-                  role="button"
+                  href="all-cards.html"
+                  class="btn btn-primary btn-lg float-right"
                >
-                  All Cards
+                  <img
+                     src="/icons/save.svg"
+                     width="20px"
+                     style="margin-bottom: 3px;"
+                     class="mr-2"
+                  />
+                  Save
                </a>
+               <div class="text-center text-muted my-6">
+                  <h4>
+                     Card properties
+                  </h4>
+               </div>
+               <div class="row mb-2">
+                  <div class="col-4">
+                     <p class="text-muted">Created on:</p>
+                  </div>
+                  <div class="col-8">
+                     <p>Dec. 24, 2019</p>
+                  </div>
+               </div>
+               <div class="row mb-2">
+                  <div class="col-4">
+                     <p class="text-muted">Last attempt:</p>
+                  </div>
+                  <div class="col-8">
+                     <p>Dec. 31, 2019</p>
+                  </div>
+               </div>
+               <div class="row mb-2">
+                  <div class="col-4">
+                     <p class="text-muted">Next attempt:</p>
+                  </div>
+                  <div class="col-8">
+                     <p>Jul. 14, 2020</p>
+                  </div>
+               </div>
+               <div class="row mb-4">
+                  <div class="col-4">
+                     <p class="text-muted">Consecutives:</p>
+                  </div>
+                  <div class="col-8">
+                     <p>4</p>
+                  </div>
+               </div>
+               <div class="row col mb-4">
+                  <div class="custom-control custom-checkbox">
+                     <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="delete-check"
+                     />
+                     <label class="custom-control-label" for="delete-check"
+                        >Show delete button</label
+                     >
+                  </div>
+               </div>
+               <div class="row col">
+                  <a
+                     class="btn btn-large btn-outline-danger invisible"
+                     id="card-delete"
+                     href="all-cards.html"
+                  >
+                     Delete this card
+                  </a>
+               </div>
             </div>
-
-
-                  
-               
          </div>
       </div>
    </body>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
+   <script src="script.js" defer></script>
 </html>
