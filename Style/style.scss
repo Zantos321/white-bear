@@ -46,6 +46,40 @@
    display: none;
 }
 
+// HEADER RESIZING
+.header {
+   margin-left: 2;
+}
+.header h1 {
+   margin-left: 5;
+}
+@media (max-width: 465px) {
+   .header {
+      justify-content: center;
+   }
+   .header h1 {
+      font-size: 45px;
+   }
+   .header img {
+      width: 135px;
+      margin-left: 1;
+      margin-top: -6;
+   }
+}
+@media (max-width: 365px) {
+   .header {
+      justify-content: center;
+   }
+   .header h1 {
+      font-size: 43px;
+   }
+   .header img {
+      width: 110px;
+      margin-left: 1;
+      margin-top: -6;
+   }
+}
+
 // Card Pages
 
 .btn-link {
@@ -91,6 +125,12 @@
    border-top-right-radius: 0;
 }
 
+.all-card-body-text {
+   color: $white;
+   font-family: $font-family-serif;
+   font-size: $font-size-base;
+}
+
 textarea {
    width: 100%;
    background-color: transparent;
@@ -112,4 +152,8 @@ textarea {
 .bg-success,
 .bg-danger p.lead {
    color: $white;
+}
+
+.delete-verify {
+   cursor: pointer;
 }

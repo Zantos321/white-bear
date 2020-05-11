@@ -58,8 +58,16 @@
                <div class="mb-2">
                   <div class="card bg-primary">
                      <div class="card-body">
-                        <textarea rows="11" class="d-sm-none"></textarea>
-                        <textarea rows="6" class="d-none d-sm-block"></textarea>
+                        <textarea
+                           rows="11"
+                           class="d-sm-none"
+                           autofocus="autofocus"
+                        ></textarea>
+                        <textarea
+                           rows="6"
+                           class="d-none d-sm-block"
+                           autofocus="autofocus"
+                        ></textarea>
                      </div>
                   </div>
 
@@ -133,10 +141,12 @@
                   <div class="custom-control custom-checkbox text-muted">
                      <input
                         type="checkbox"
-                        class="custom-control-input"
+                        class="custom-control-input delete-verify"
                         id="delete-check"
                      />
-                     <label class="custom-control-label" for="delete-check"
+                     <label
+                        class="custom-control-label delete-verify"
+                        for="delete-check"
                         >Show delete button</label
                      >
                   </div>

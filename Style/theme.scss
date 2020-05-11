@@ -165,6 +165,9 @@ $border-radius: map-get($spacers, 1);
 $border-radius-lg: $border-radius;
 $border-radius-sm: $border-radius;
 
+$input-border-color: $gray-400;
+$input-border-width: $border-width;
+
 // BUTTONS AND INPUTS
 
 $input-btn-padding-y: map-get($spacers, 2);

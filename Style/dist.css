@@ -1991,7 +1991,7 @@ pre code {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 2px solid #80818d;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2036,23 +2036,23 @@ select.form-control:focus::-ms-value {
 }
 
 .col-form-label {
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.5;
 }
 
 .col-form-label-lg {
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 1rem;
   line-height: 1.5;
 }
 
 .col-form-label-sm {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -2067,7 +2067,7 @@ select.form-control:focus::-ms-value {
   color: #212529;
   background-color: transparent;
   border: solid transparent;
-  border-width: 1px 0;
+  border-width: 2px 0;
 }
 .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
   padding-right: 0;
@@ -3308,7 +3308,7 @@ input[type=button].btn-block {
 .input-group > .custom-file + .form-control,
 .input-group > .custom-file + .custom-select,
 .input-group > .custom-file + .custom-file {
-  margin-left: -1px;
+  margin-left: -2px;
 }
 .input-group > .form-control:focus,
 .input-group > .custom-select:focus,
@@ -3362,15 +3362,15 @@ input[type=button].btn-block {
 .input-group-append .btn + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
 .input-group-append .input-group-text + .btn {
-  margin-left: -1px;
+  margin-left: -2px;
 }
 
 .input-group-prepend {
-  margin-right: -1px;
+  margin-right: -2px;
 }
 
 .input-group-append {
-  margin-left: -1px;
+  margin-left: -2px;
 }
 
 .input-group-text {
@@ -3385,7 +3385,7 @@ input[type=button].btn-block {
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
-  border: 1px solid #ced4da;
+  border: 2px solid #ced4da;
   border-radius: 0.25rem;
 }
 .input-group-text input[type=radio],
@@ -11378,6 +11378,44 @@ h3 {
   display: none;
 }
 
+.header {
+  margin-left: 2;
+}
+
+.header h1 {
+  margin-left: 5;
+}
+
+@media (max-width: 465px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header h1 {
+    font-size: 45px;
+  }
+
+  .header img {
+    width: 135px;
+    margin-left: 1;
+    margin-top: -6;
+  }
+}
+@media (max-width: 365px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header h1 {
+    font-size: 43px;
+  }
+
+  .header img {
+    width: 110px;
+    margin-left: 1;
+    margin-top: -6;
+  }
+}
 .btn-link {
   padding-left: 0;
   padding-right: 0;
@@ -11421,6 +11459,12 @@ h3 {
   border-top-right-radius: 0;
 }
 
+.all-card-body-text {
+  color: #fff;
+  font-family: "Noto Serif", serif;
+  font-size: 1rem;
+}
+
 textarea {
   width: 100%;
   background-color: transparent;
@@ -11441,6 +11485,10 @@ textarea {
 .bg-success,
 .bg-danger p.lead {
   color: #fff;
+}
+
+.delete-verify {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=dist.css.map */
