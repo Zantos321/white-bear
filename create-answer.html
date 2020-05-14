@@ -60,12 +60,13 @@
                   <div class="card bg-secondary">
                      <div class="card-body">
                         <textarea
+                           id="cardTextsm"
                            rows="11"
                            class="d-sm-none"
                            autofocus="autofocus"
                         ></textarea>
                         <textarea
-                           id="cardText"
+                           id="cardTextlg"
                            rows="6"
                            class="d-none d-sm-block"
                            autofocus="autofocus"
@@ -75,19 +76,17 @@
                </div>
 
                <div class="float-right mb-5">
-                  <p>
-                     <span id="wordCount">0</span>
-                     <span id="wordMaximum">/240</span>
-                  </p>
+                  <span id="wordCount">0</span>
+                  <span id="wordMaximum">/240</span>
                </div>
                <div class="clearfix"></div>
 
                <div class="float-right mb-4">
                   <a
+                     id="nextButton"
                      href="/create-imagery.html"
                      class="btn btn-lg btn-outline-primary disabled"
                      role="button"
-                     id="nextButton"
                      >Next</a
                   >
                </div>
@@ -99,4 +98,5 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       defer
    ></script>
+   <script src="script.js" defer></script>
 </html>

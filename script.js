@@ -64,9 +64,32 @@ $("#delete-check").click(function () {
 
 // TEXTAREA COUNTER
 
-$("#cardText").keyup(function () {
+$("#cardTextlg").keyup(function () {
    var textCount = $(this).val().length;
-   var current = $("#wordCount");
+   console.log("textCount");
+   $("#wordCount").text(textCount);
+   if (0 == textCount <= 240) {
+      $("#nextButton").addClass("disabled");
+      $("#wordCount").addClass("text-danger");
+      $("#wordMaximum").addClass("text-danger");
+   } else {
+      $("#nextButton").removeClass("disabled");
+      $("#wordCount").removeClass("text-danger");
+      $("#wordMaximum").removeClass("text-danger");
+   }
+});
 
-   current.text(textCount);
+$("#cardTextsm").keyup(function () {
+   var textCount = $(this).val().length;
+   console.log("textCount");
+   $("#wordCount").text(textCount);
+   if (0 == textCount <= 240) {
+      $("#nextButton").addClass("disabled");
+      $("#wordCount").addClass("text-danger");
+      $("#wordMaximum").addClass("text-danger");
+   } else {
+      $("#nextButton").removeClass("disabled");
+      $("#wordCount").removeClass("text-danger");
+      $("#wordMaximum").removeClass("text-danger");
+   }
 });
