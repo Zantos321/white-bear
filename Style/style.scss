@@ -46,6 +46,11 @@
    display: none;
 }
 
+.alert {
+   font-family: $font-family-base;
+   font-size: $font-size-base;
+   font-weight: $font-weight-normal;
+}
 // HEADER RESIZING
 .header {
    margin-left: 2;

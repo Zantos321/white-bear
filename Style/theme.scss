@@ -89,20 +89,23 @@ $theme-colors: map-merge(
 
 // SPACING
 
+// $spacer is used for font sizes, thus rem is preferred
+// $spacers are used for paddings and margins and px are preferred
+
 $spacer: 1rem; // 16px in most browsers
 $spacers: ();
 $spacers: map-merge(
    (
-      0: 0,
-      1: 4,
-      2: 8,
-      3: 12,
-      4: $spacer,
-      5: 24,
-      6: 32,
-      7: 48,
-      8: 64,
-      9: 128,
+      0: 0px,
+      1: 4px,
+      2: 8px,
+      3: 12px,
+      4: 16px,
+      5: 24px,
+      6: 32px,
+      7: 48px,
+      8: 64px,
+      9: 128px,
    ),
    $spacers
 );
@@ -221,7 +224,16 @@ $input-padding-x-lg: $input-btn-padding-x-lg;
 $input-font-size-lg: $font-size-base;
 $input-line-height-lg: $line-height-base;
 
-// Checkbox;
+// ALERT
+
+$alert-padding-y: 0.75rem;
+$alert-padding-x: 1.25rem;
+$alert-margin-bottom: 1rem;
+$alert-border-radius: $border-radius;
+$alert-link-font-weight: $font-weight-n;
+$alert-border-width: $border-width;
+
+// CHECKBOX
 
 $component-active-color: $white;
 $component-active-bg: theme-color("primary");

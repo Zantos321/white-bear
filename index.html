@@ -46,30 +46,36 @@
                                  Lets get you signed up.
                               </p>
                               <div class="form-group">
-                                 <label class="input-text" for="email"
+                                 <label class="input-text" for="email" 
                                     >Email address</label
                                  >
                                  <input
                                     type="email"
                                     class="form-control"
-                                    id="email"
+                                    id="signupEmail"
                                     aria-describedby="email-help"
                                  />
+                                 <div class="alert alert-danger d-none" role="alert" id="signupEmailAlert">
+                                    Please enter your email address.
+                                  </div>
                               </div>
                               <div class="form-group">
-                                 <label class="input-text" for="password"
+                                 <label class="input-text" for="password" 
                                     >Create a password</label
                                  >
                                  <input
                                     type="password"
                                     class="form-control"
-                                    id="password"
+                                    id="signupPassword"
                                  />
+                                 <div class="alert alert-danger d-none" role="alert" id="signupPasswordAlert">
+                                    Please create a 9 chacater password.
+                                  </div>
                               </div>
                               <a
-                              class="btn btn-success btn-landing btn-block mt-5"
                               href="create-answer.html"
-                              role="button"
+                              id = "signupVerify"
+                              class="btn btn-success btn-landing btn-block mt-5"
                               >Lets go!</a
                            >
                            </div>
@@ -87,32 +93,39 @@
                            <p class="card-text mb-4">
                               Log in with your email address and password
                            </p>
-                           <div class="form-group">
-                              <label class="input-text" for="email"
+                           <div class="form-group" id="loginForm">
+                              <label class="input-text" for="email" 
                                  >Email address</label
                               >
                               <input
                                  type="email"
                                  class="form-control"
-                                 id="email"
+                                 id="loginEmail"
                                  aria-describedby="email-help"
                               />
+                              <div class="alert alert-danger d-none" role="alert" id="emailAlert">
+                                 Please enter your email address.
+                               </div>
                            </div>
-                           <div class="form-group">
+                           <div class="form-group" id="loginForm">
                               <label class="input-text" for="password"
                                  >Password</label
                               >
                               <input
                                  type="password"
                                  class="form-control"
-                                 id="password"
+                                 id="loginPassword"
                               />
+                              <div class="alert alert-danger d-none" role="alert" id="passwordAlert">
+                                 Please enter a password over 9 characters.
+                               </div>
                            </div>
                            <a
                               href="create-answer.html"
+                              id="loginVerify"
                               class="btn btn-success btn-lg btn-landing float-right"
-                              >Log in</a
-                           >
+                              >Log in</a>
+                           
                         </div>
                      </div>
                   </div>
@@ -121,11 +134,10 @@
          </div>
       </div>
    </body>
-   <script
-   src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-   defer
-></script>
-<script src="script.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+   <script src="/functions.js" defer></script>
+   <script src="script.js" defer></script>
 </html>

@@ -65,6 +65,7 @@
                            autofocus="autofocus"
                         ></textarea>
                         <textarea
+                           id="cardText"
                            rows="6"
                            class="d-none d-sm-block"
                            autofocus="autofocus"
@@ -73,14 +74,20 @@
                   </div>
                </div>
 
-               <p class="float-right mb-5">0/240</p>
+               <div class="float-right mb-5">
+                  <p>
+                     <span id="wordCount">0</span>
+                     <span id="wordMaximum">/240</span>
+                  </p>
+               </div>
                <div class="clearfix"></div>
 
                <div class="float-right mb-4">
                   <a
                      href="/create-imagery.html"
-                     class="btn btn-lg btn-outline-primary"
+                     class="btn btn-lg btn-outline-primary disabled"
                      role="button"
+                     id="nextButton"
                      >Next</a
                   >
                </div>
@@ -88,4 +95,8 @@
          </div>
       </div>
    </body>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
 </html>
