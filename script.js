@@ -1,51 +1,16 @@
 // SIGN UP VALIDATION
 
-var emailVerify = false;
 $("#signupVerify").click(function () {
-   // Check length of email
-   var emailInput = $("#signupEmail").val().length;
-   // Run a check to either allow email or to show a warning under email
-   if (emailInput == 0) {
-      $("#signupEmailAlert").removeClass("d-none");
-      return false;
-   } else {
-      $("#signupEmailAlert").addClass("d-none");
-      return (emailVerify = true);
-   }
-});
+   // Calling Verification functions
+   emailVerify();
+   passwordVerify();
+   emailPasswordVerify();
 
-var passwordVerify = false;
-$("#signupVerify").click(function () {
-   // Check length of password
-   var passwordInput = $("#signupPassword").val().length;
-   // Check password to see if met requirement and eityher allow password by length or show a warning under password
-   if (passwordInput < 9) {
-      $("#signupPasswordAlert").removeClass("d-none");
-      return false;
-   } else {
-      $("#signupPasswordAlert").addClass("d-none");
-      return (passwordVerify = true);
-   }
-});
-
-var emailPasswordVerify = false;
-$("#signupVerify").click(function () {
-   // Get email local part
-   var emailLocal = $("#signupEmail").val().split("@")[0];
-   // Check to see if password and local email match
-   if ($("#signupPassword").val() === emailLocal) {
-      $("#passwordMatchesEmailAlert").removeClass("d-none");
-      $("#signupEmail").addClass("is-invalid");
-      return false;
-   } else {
-      $("#passwordMatchesEmailAlert").addClass("d-none");
-      $("#signupEmail").removeClass("is-invalid");
-      return (emailPasswordVerify = true);
-   }
-});
-
-$("#signupVerify").click(function () {
-   if ((emailVerify = true)) {
+   if (
+      emailVerify() == true &&
+      passwordVerify() == true &&
+      emailPasswordVerify() == true
+   ) {
       var emailLog = $("#signupEmail").val();
       var passwordLog = $("#signupPassword").val();
       console.log("_id: " + IDnumber());
@@ -99,7 +64,7 @@ $("#delete-check").click(function () {
 
 $("#cardTextlg").keyup(function () {
    var textCount = $(this).val().length;
-   console.log("textCount");
+   //console.log("textCount");
    $("#wordCount").text(textCount);
    if (0 == textCount <= 240) {
       $("#nextButton").addClass("disabled");
@@ -114,7 +79,7 @@ $("#cardTextlg").keyup(function () {
 
 $("#cardTextsm").keyup(function () {
    var textCount = $(this).val().length;
-   console.log("textCount");
+   //console.log("textCount");
    $("#wordCount").text(textCount);
    if (0 == textCount <= 240) {
       $("#nextButton").addClass("disabled");
@@ -127,7 +92,51 @@ $("#cardTextsm").keyup(function () {
    }
 });
 
-// ID AND DATE AND TIME FUNCTIONS
+// Save imagery Counter and Log
+
+$("#cardTextlg").keyup(function () {
+   var textCount = $(this).val().length;
+   //console.log("textCount");
+   $("#wordCount").text(textCount);
+   if (0 == textCount <= 240) {
+      $("#save-imagery").addClass("disabled");
+      $("#wordCount").addClass("text-danger");
+      $("#wordMaximum").addClass("text-danger");
+   } else {
+      $("#save-imagery").removeClass("disabled");
+      $("#wordCount").removeClass("text-danger");
+      $("#wordMaximum").removeClass("text-danger");
+   }
+});
+
+$("#cardTextsm").keyup(function () {
+   var textCount = $(this).val().length;
+   //console.log("textCount");
+   $("#wordCount").text(textCount);
+   if (0 == textCount <= 240) {
+      $("#save-imagery").addClass("disabled");
+      $("#wordCount").addClass("text-danger");
+      $("#wordMaximum").addClass("text-danger");
+   } else {
+      $("#save-imagery").removeClass("disabled");
+      $("#wordCount").removeClass("text-danger");
+      $("#wordMaximum").removeClass("text-danger");
+   }
+});
+
+$("#save-imagery").click(function () {
+   console.log("_id: " + IDnumber() + ",");
+   console.log("imagery: " + "Imagery goes here" + ",");
+   console.log("answer: " + "Answer goes here" + ",");
+   console.log("levelNum: " + "1" + ",");
+   console.log("successfulAttemptNum: " + "0" + ",");
+   console.log("createdOn: " + createdDate() + ",");
+   console.log("lastAttemptedOn: " + createdDate());
+});
+
+// FUNCTIONS
+
+// ID Function
 
 function IDnumber() {
    // Get current date
@@ -143,6 +152,7 @@ function IDnumber() {
    return getMillisecondsID + outputRandom;
 }
 
+// Date-Time Function
 function createdDate() {
    var now = new Date();
    var yearFull = String(now.getFullYear());
@@ -162,4 +172,51 @@ function createdDate() {
    // Everything concatenated together to make a date code
    var createdOn = year + month + day + hour + minutes + seconds;
    return createdOn;
+}
+
+//Email Length Verification
+
+function emailVerify() {
+   // Check length of email
+   var emailInput = $("#signupEmail").val().length;
+   // Run a check to either allow email or to show a warning under email
+   if (emailInput == 0) {
+      $("#signupEmailAlert").removeClass("d-none");
+      return false;
+   } else {
+      $("#signupEmailAlert").addClass("d-none");
+      return true;
+   }
+}
+
+// Passsword Length Verification
+
+function passwordVerify() {
+   // Check length of password
+   var passwordInput = $("#signupPassword").val().length;
+   // Check password to see if met requirement and eityher allow password by length or show a warning under password
+   if (passwordInput < 9) {
+      $("#signupPasswordAlert").removeClass("d-none");
+      return false;
+   } else {
+      $("#signupPasswordAlert").addClass("d-none");
+      return true;
+   }
+}
+
+// Email-Password Comparison Verification
+
+function emailPasswordVerify() {
+   // Get email local part
+   var emailLocal = $("#signupEmail").val().split("@")[0];
+   // Check to see if password and local email match
+   if ($("#signupPassword").val() === emailLocal) {
+      $("#passwordMatchesEmailAlert").removeClass("d-none");
+      $("#signupEmail").addClass("is-invalid");
+      return false;
+   } else {
+      $("#passwordMatchesEmailAlert").addClass("d-none");
+      $("#signupEmail").removeClass("is-invalid");
+      return true;
+   }
 }
