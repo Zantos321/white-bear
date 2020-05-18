@@ -58,6 +58,9 @@
                                  <div class="alert alert-danger d-none" role="alert" id="signupEmailAlert">
                                     Please enter your email address.
                                   </div>
+                                  <div class="alert alert-danger d-none" role="alert" id="passwordMatchesEmailAlert">
+                                    Your email address cannot be used in you password.
+                                  </div>
                               </div>
                               <div class="form-group">
                                  <label class="input-text" for="password" 
@@ -69,14 +72,16 @@
                                     id="signupPassword"
                                  />
                                  <div class="alert alert-danger d-none" role="alert" id="signupPasswordAlert">
-                                    Please create a 9 chacater password.
+                                    Please create a 9 character password.
+                                  </div>
+                                  <div class="alert alert-danger d-none" role="alert" id="passwordMatchesEmailAlert">
+                                    Your password cannot match your email.
                                   </div>
                               </div>
-                              <a
-                              href="create-answer.html"
+                              <button
                               id = "signupVerify"
                               class="btn btn-success btn-landing btn-block mt-5"
-                              >Lets go!</a
+                              >Lets go!</button
                            >
                            </div>
                      </div>
@@ -134,10 +139,8 @@
          </div>
       </div>
    </body>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-  
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
-   <script src="/functions.js" defer></script>
-   <script src="script.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="script.js" defer></script>
 </html>
