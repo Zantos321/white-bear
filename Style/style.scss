@@ -2,9 +2,10 @@
 
 .landing-background {
    background-image: url(/images/background-landing.jpg);
+   height: 100%;
    background-size: cover;
    background-repeat: no-repeat;
-   background-position: center center;
+   background-position: center;
 }
 
 .landing-card {

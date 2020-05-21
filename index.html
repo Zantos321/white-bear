@@ -1,3 +1,4 @@
+
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -5,10 +6,11 @@
       <link rel="stylesheet" href="style/dist.css" />
       <title>White Bear Landing Page</title>
    </head>
-   <body class="landing-background">
+   <body>
+      <div class="landing-background">
       <div class="container-fluid">
          <!-- top logo with brand image -->
-         <div class="row mb-8 pt-7 ml-xl-8 ml-lg-5 ml-md-4 mt-5 justify-content-left">
+         <div class="row mb-8 pt-7 ml-2 justify-content-left">
             <div class="header">
                
                <img
@@ -32,14 +34,12 @@
                         <p class="card-text mb-5">
                            Sign up for White Bear.Free Forever.
                         </p>
-                        <a
+                        <button
                               class="btn btn-success btn-landing btn-block hide-me"
-                              data-toggle="collapse"
-                              href="#signup-collapse"
-                              role="button"
                               aria-expanded="false"
-                              aria-controls="signup-collapse"
-                              >Sign up</a
+                              aria-controls="#signup-collapse"
+                              id="signupButton"
+                              >Sign up</button
                            >
                            <div class="collapse" id="signup-collapse">
                               <p class="signup-text mb-4"> 
@@ -83,6 +83,7 @@
                               </div>
                               <button
                               id = "signupVerify"
+                              type ="button"
                               class="btn btn-success btn-landing btn-block mt-5"
                               >Lets go!</button
                            >
@@ -130,7 +131,7 @@
                            </div>
                            <a
                               href="create-answer.html"
-                              id="loginVerify"
+                              id="#loginVerify"
                               class="btn btn-success btn-lg btn-landing float-right"
                               >Log in</a>
                            
@@ -141,9 +142,9 @@
             </div>
          </div>
       </div>
+   </div>
    </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+<script src="commonPasswords.js" defer></script>
 <script src="script.js" defer></script>
 </html>
