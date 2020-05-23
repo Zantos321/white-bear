@@ -5,6 +5,7 @@ $("#signupVerify").click(function () {
 
    if (
       emailVerify() == true &&
+      garbageEmail() == true &&
       passwordVerify() == true &&
       emailPasswordVerify() == true &&
       commonPasswordVerify() == true
@@ -13,7 +14,7 @@ $("#signupVerify").click(function () {
       let passwordLog = $("#signupPassword").val();
       console.log("_id: " + IDnumber());
       console.log("email: " + emailLog);
-      console.log("password: " + passwordLog);
+      console.log("password: " + passwordEncrypt());
       console.log("createdOn: " + createdDate());
    }
 });
@@ -183,6 +184,29 @@ function createdDate() {
    return createdOn;
 }
 
+// Pasword Encryption
+
+function passwordEncrypt() {
+   let userPassword = $("#signupPassword").val().split(""); // grabbed password and spit it into an array
+   for (let count = 0; count < userPassword.length; ++count) {
+      //for loop to start comparing characters
+      const character = userPassword[count];
+      if (character === "z") {
+         // if character is a z
+         userPassword[count] = "a"; // then make it an a
+      } else if (character === "Z") {
+         // if character is a Z
+         userPassword[count] = "A"; // then make it an A
+      } else {
+         userPassword[count] = String.fromCharCode(
+            // raises the charCodeAt by one for all other alphabetical characters
+            userPassword[count].charCodeAt(0) + 1
+         );
+      }
+   }
+   return userPassword.join(""); // turns the array back into a string for logging
+}
+
 //Email Length Verification
 
 function emailVerify() {
@@ -201,6 +225,24 @@ function emailVerify() {
    }
 }
 
+// Garbage Email Verification
+
+function garbageEmail() {
+   let userEmail = $("#signupEmail").val().split("@")[0];
+   let uniqueChars = "";
+   for (let count = 0; count < userEmail.length; count++) {
+      if (uniqueChars.indexOf(userEmail.charAt(count)) === -1) {
+         uniqueChars += userEmail[count];
+      }
+      if (uniqueChars.length > 2) {
+         $("#garbageEmailAlert").addClass("d-none");
+         return true;
+      }
+   }
+   $("#garbageEmailAlert").removeClass("d-none");
+   return false;
+}
+
 // Passsword Length Verification
 
 function passwordVerify() {
@@ -209,12 +251,9 @@ function passwordVerify() {
    // Check password to see if met requirement and either allow password by length or show a warning under password
    if (passwordInput < 9) {
       $("#signupPasswordAlert").removeClass("d-none");
-      $("#signupPassword").addClass("is-invalid");
       return false;
    } else {
       $("#signupPasswordAlert").addClass("d-none");
-      $("#signupPassword").removeClass("is-invalid");
-      $("#signupPassword").addClass("is-valid");
       return true;
    }
 }
@@ -253,17 +292,14 @@ function commonPasswordVerify() {
       })
    ) {
       $("#commonPasswordAlert").removeClass("d-none");
-
-      $("#signupPassword").addClass("is-invalid");
       return false;
    } else {
       $("#commonPasswordAlert").addClass("d-none");
-      $("#signupPassword").removeClass("is-invalid");
-      $("#signupPassword").addClass("is-valid");
       return true;
    }
 }
 
+// CreateAccount Card Collapse Functionality
 $("#signupButton").click(function () {
    $("#signup-collapse").addClass("collapse.show");
    $("#signup-collapse").removeClass("collapse");
