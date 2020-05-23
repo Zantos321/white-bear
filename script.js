@@ -188,21 +188,28 @@ function createdDate() {
 
 function passwordEncrypt() {
    let userPassword = $("#signupPassword").val().split(""); // grabbed password and spit it into an array
+   //for loop to start comparing characters
    for (let count = 0; count < userPassword.length; ++count) {
-      //for loop to start comparing characters
       const character = userPassword[count];
-      if (character === "z") {
-         // if character is a z
-         userPassword[count] = "a"; // then make it an a
-      } else if (character === "Z") {
-         // if character is a Z
-         userPassword[count] = "A"; // then make it an A
-      } else {
-         userPassword[count] = String.fromCharCode(
-            // raises the charCodeAt by one for all other alphabetical characters
-            userPassword[count].charCodeAt(0) + 1
-         );
-      }
+      if (
+         // used to isolate just letters capitalized letter char codes 65-90 lowercase letter chacrodes 97-122
+         (userPassword[count].charCodeAt(0) >= 65 &&
+            userPassword[count].charCodeAt(0) <= 90) ||
+         (userPassword[count].charCodeAt(0) >= 97 &&
+            userPassword[count].charCodeAt(0) <= 122)
+      )
+         if (character === "z") {
+            // if character is a z
+            userPassword[count] = "a"; // then make it an a
+         } else if (character === "Z") {
+            // if character is a Z
+            userPassword[count] = "A"; // then make it an A
+         } else {
+            userPassword[count] = String.fromCharCode(
+               // raises the charCodeAt by one for all other alphabetical characters
+               userPassword[count].charCodeAt(0) + 1
+            );
+         }
    }
    return userPassword.join(""); // turns the array back into a string for logging
 }
@@ -228,18 +235,21 @@ function emailVerify() {
 // Garbage Email Verification
 
 function garbageEmail() {
-   let userEmail = $("#signupEmail").val().split("@")[0];
-   let uniqueChars = "";
+   let userEmail = $("#signupEmail").val().split("@")[0]; // took email local away from address
+   let uniqueChars = ""; // empty string to put unique characters in
    for (let count = 0; count < userEmail.length; count++) {
+      // for loop to sii if unique character
       if (uniqueChars.indexOf(userEmail.charAt(count)) === -1) {
-         uniqueChars += userEmail[count];
+         // use charAt to see if they are unique items with the same charCode as one allready ran will not be added
+         uniqueChars += userEmail[count]; // added unique charcode to the list
       }
       if (uniqueChars.length > 2) {
+         // if the unique list length is over 3, then the validation passes
          $("#garbageEmailAlert").addClass("d-none");
          return true;
       }
    }
-   $("#garbageEmailAlert").removeClass("d-none");
+   $("#garbageEmailAlert").removeClass("d-none"); // other wise it will retrun false
    return false;
 }
 
