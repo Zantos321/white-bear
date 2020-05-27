@@ -175,3 +175,14 @@ $("#signupButton").click(function () {
    $("#signup-collapse").removeClass("collapse");
    $("#signupButton").addClass("d-none");
 });
+
+// All-Cards Search and Sanitization
+$("#allCardsSearchButton").click(function () {
+   let searchText = $("#allCardsSearchText").val();
+   const otherClear = /\d+|\W+/g; //looks for anything that is not an alphabetical character
+   let cleanSearch = searchText
+      .toLowerCase() // makes all letters lowercase
+      .replace(otherClear, " ") // removes double spaces and non alphabetical characters from the search
+      .trim(); // removes white space from the beginning and ending of the search
+   console.log(cleanSearch);
+});

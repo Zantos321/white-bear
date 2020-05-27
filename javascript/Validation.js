@@ -6,12 +6,12 @@ $("#signupVerify").click(function () {
    if (
       emailVerify() == true &&
       garbageEmail() == true &&
+      validEmailType() == true &&
       passwordVerify() == true &&
       emailPasswordVerify() == true &&
       commonPasswordVerify() == true
    ) {
       let emailLog = $("#signupEmail").val();
-      let passwordLog = $("#signupPassword").val();
       console.log("_id: " + IDnumber());
       console.log("email: " + emailLog);
       console.log("password: " + passwordEncrypt());
@@ -56,7 +56,6 @@ function emailVerify() {
    } else {
       $("#signupEmailAlert").addClass("d-none");
       $("#signupEmail").removeClass("is-invalid");
-      $("#signupEmail").addClass("is-valid");
       return true;
    }
 }
@@ -80,6 +79,26 @@ function garbageEmail() {
    }
    $("#garbageEmailAlert").removeClass("d-none"); // other wise it will retrun false
    return false;
+}
+
+// Valid Email Address Verification
+
+function validEmailType() {
+   let userEmail = $("#signupEmail").val();
+   const emailValidation = /^\w+@\w+\.\w{2,}$/gi;
+   /* needs to start with an alphanumberic character ==> ^w+
+     have an @ character ==> @
+     have at least one alphanumberic number ==> \w+
+     a . character ==> \.
+     ending with at least 2 alphabetical characters ==> \w{2,}$
+     */
+   if (emailValidation.test(userEmail)) {
+      $("#validEmailAlert").addClass("d-none");
+      return true;
+   } else {
+      $("#validEmailAlert").removeClass("d-none");
+      return false;
+   }
 }
 
 // Passsword Length Verification
@@ -110,7 +129,6 @@ function emailPasswordVerify() {
    } else {
       $("#passwordMatchesEmailAlert").addClass("d-none");
       $("#signupEmail").removeClass("is-invalid");
-      $("#signupEmail").addClass("is-valid");
       return true;
    }
 }
